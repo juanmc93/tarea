@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Juan Martínez</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/media.css" media="screen and (max-width:768px)"/> -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- <style>
+      @media screen and (max-width: 768px) {
+        body {
+          border: 10px solid blue;
+        }
+      }
+    </style> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  </head>
+  <body>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
+    <header class="header">
+      <div class="container">
+        <figure class="logo">
+          <img src="images/logo-google.png" height="50" alt="Logo de http://google.com" />
+        </figure>
+        <nav class="menu">
+          <ol>
+            <li>
+              <a class="link" href="#portafolio">Incio</a>
+            </li>
+            <li>
+              <a class="link" href="#eventos">Quienes somos</a>
+            </li>
+            <li>
+              <a class="link" href="#contacto">Servicios</a>
+            </li>
+            <li>
+              <a class="link" href="#contacto">Contacto</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container">
+        <img class="hero-image"  src="images/trent-haaland-eNI-0vy7IBE-unsplash.jpg" width="1227" height="300" alt="imagen principal del sitio"> 
+      </div>
+    </section>
+    <section id="portafolio" class="portfolio">
+      <div class="container">
+        <TABLE CELLSPACING="10">
+        <tr>
+          <th WIDTH="500" >#Servicio1</th>
+          <th WIDTH="500">#Servicio2</th>
+          <th WIDTH="500">#Servicio3</th>
+        </tr>
+      </TABLE>
+        
+        
+     
+     
+      </div>
+      
+    </section>
+   
+    <section id="contacto" class="contact">
+      <div class="container2">
+        <form action="/suscripcion/" class="form-email">
+          <h3>CONTACTANOS</h3>
+          <input type="text"  size="21" maxlength="100" placeholder="Queremos saber mas de ti " id="email">
+          <button>ENVIAR MENSAJE </button>
+    </section>
+  
+    <script>
+      // console.log('Hola mundo! es mi primera linea en JS');
+      const ipad = window.matchMedia('screen and (max-width: 767px)')
+      const menu = document.querySelector('.menu');
+      // console.log(menu);
+      const burgerButton = document.querySelector('#burger-menu');
+      // console.log(burgerButton);
+
+
+      ipad.addListener(validation)
+
+      function validation(event) {
+        if (event.matches) {
+          burgerButton.addEventListener('click', hideShow)
+        } else {
+          burgerButton.removeEventListener('click', hideShow)
+        }
+      }
+      validation(ipad);
+
+
+      function hideShow() {
+        if (menu.classList.contains('is-active')) {
+          menu.classList.remove('is-active');
+        } else {
+          menu.classList.add('is-active');
+        }
+      }
+    </script>
+  </body>
+</html>
